@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
 
-int nextDirection()
-{
-}
-
 int *spiralOrder(int **matrix, int matrixSize, int *matrixColSize, int *returnSize)
 {
   printf("%d ", matrixSize);
