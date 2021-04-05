@@ -37,9 +37,7 @@ HRESULT initD2DResources(D2DResources* d2dResources, HWND hWnd) {
     hr = d2dResources->hwndRenderTarget->CreateSolidColorBrush(
         D2D1::ColorF(D2D1::ColorF::LightSlateGray),
         &d2dResources->drawingResources.grayBrush);
-
-    hr = d2dResources->dwFactory->CreateTextFormat()
-
+        
     return hr;
   }
   return E_FAIL;

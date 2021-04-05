@@ -1,3 +1,5 @@
+#ifndef QSORT_H
+#define QSORT_H
 #include <stdio.h>
 
 void qsort_helper(int* arr, int start, int end) {
@@ -34,7 +36,7 @@ void qsort(int* arr, int size) {
   qsort_helper(arr, 0, size - 1);
 }
 
-int main() {
+int _qs_tester() {
   int arr[] = {4,2,3,5,6};
   qsort(arr, 5);
   for (int i = 0; i < 5; i++) {
@@ -42,3 +44,5 @@ int main() {
   }
   return 0;
 }
+
+#endif

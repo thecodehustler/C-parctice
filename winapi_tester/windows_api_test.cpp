@@ -51,10 +51,6 @@ void init(HINSTANCE hInstance) {
   }
 }
 
-HWND initWindow(HINSTANCE hInstance) {
-
-}
-
 void runMsgLoop() {
   MSG msg = {};
   while (GetMessage(&msg, NULL, 0, 0)) {
@@ -71,7 +67,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, 
   int w, h;
   calculateWH(&resources, 640, 480, &w, &h);
 
-  HWND hWnd = CreateWindowEx(0, wClassName, TEXT("Windows 窗口程序"), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT,CW_USEDEFAULT,w,h,
+  HWND hWnd = CreateWindowEx(0, wClassName, TEXT("Windows 窗口程序"), WS_OVERLAPPEDWINDOW^(WS_MAXIMIZEBOX | WS_THICKFRAME), CW_USEDEFAULT,CW_USEDEFAULT,w,h,
   NULL, NULL, hInstance, NULL);
   if (hWnd == NULL) {
     printf("ERROR: Failed to create window. Last Error: %d.\n", GetLastError());
