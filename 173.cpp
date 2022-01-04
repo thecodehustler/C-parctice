@@ -3,13 +3,13 @@
 using namespace std;
 
 struct TreeNode {
-  int val;
-  TreeNode* left;
-  TreeNode* right;
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode* left, TreeNode* right)
-      : val(x), left(left), right(right) {}
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right)
+        : val(x), left(left), right(right) {}
 };
 
 /**
@@ -23,29 +23,25 @@ struct TreeNode {
  * 实现一个二叉搜索树迭迭代器类。
  */
 class BSTIterator {
-  stack<TreeNode*> st;
+    stack<TreeNode*> st;
 
- public:
-  BSTIterator(TreeNode* root) {
-    pushIn(root);
-  }
+   public:
+    BSTIterator(TreeNode* root) { pushIn(root); }
 
-  int next() {
-    TreeNode* curr = st.top();
-    st.pop();
-    pushIn(curr->right);
-    return curr->val;
-  }
-
-  bool hasNext() {
-    return !st.empty();
-  }
-
- private:
-  void pushIn(TreeNode* root) {
-    while (root) {
-      st.push(root);
-      root = root->left;
+    int next() {
+        TreeNode* curr = st.top();
+        st.pop();
+        pushIn(curr->right);
+        return curr->val;
     }
-  }
+
+    bool hasNext() { return !st.empty(); }
+
+   private:
+    void pushIn(TreeNode* root) {
+        while (root) {
+            st.push(root);
+            root = root->left;
+        }
+    }
 };

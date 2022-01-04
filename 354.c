@@ -1,5 +1,3 @@
 #include "stdio.h"
 
-int maxEnvelopes(int** envelopes, int envelopesSize, int* envelopesColSize){
-
-}
+int maxEnvelopes(int** envelopes, int envelopesSize, int* envelopesColSize) {}

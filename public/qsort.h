@@ -36,6 +36,7 @@ void qsort(int* arr, int size) {
   qsort_helper(arr, 0, size - 1);
 }
 
+#ifdef DEBUG
 int _qs_tester() {
   int arr[] = {4,2,3,5,6};
   qsort(arr, 5);
@@ -44,5 +45,6 @@ int _qs_tester() {
   }
   return 0;
 }
+#endif
 
 #endif
