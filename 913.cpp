@@ -22,8 +22,7 @@ class Solution {
      * @param mouse mouse's position;
      * @param step starts from 0, odd means cat's turn; even means mouse's turn.
      */
-    int game(Mem &mem, int cat, int mouse, int step,
-             vector<vector<int>> &graph) {
+    int game(Mem &mem, int cat, int mouse, int step, vector<vector<int>> &graph) {
         if (mouse == cat) return 2;       // cat meets mouse, cat wins.
         if (mouse == 0) return 1;         // mouse reaches hole, mouse wins.
         if (step >= n * 2 + 1) return 0;  // round draw.
@@ -76,8 +75,7 @@ class Solution {
     }
 };
 
-vector<vector<int>> graph = {{2, 5},    {3},    {0, 4, 5},
-                             {1, 4, 5}, {2, 3}, {0, 2, 3}};
+vector<vector<int>> graph = {{2, 5}, {3}, {0, 4, 5}, {1, 4, 5}, {2, 3}, {0, 2, 3}};
 
 int main() {
     Solution sln;

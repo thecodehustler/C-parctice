@@ -83,8 +83,7 @@ bool myHashSetContains(MyHashSet* obj, int key) {
 void myHashSetFree(MyHashSet* obj) {
     for (int i = 0; i < BUCKET_COUNT; i++) {
         Element* curr =
-            (obj->buckets + i)
-                ->next;  // 从 next 开始，后续的元素都是通过 malloc 申请得到的。
+            (obj->buckets + i)->next;  // 从 next 开始，后续的元素都是通过 malloc 申请得到的。
         while (curr) {
             Element* tobeDeleted = curr;
             curr = curr->next;

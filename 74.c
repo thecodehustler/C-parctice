@@ -4,8 +4,7 @@
 
 #include "public/arr_alloc.h"
 
-bool searchMatrix(int** matrix, int matrixSize, int* matrixColSize,
-                  int target) {
+bool searchMatrix(int** matrix, int matrixSize, int* matrixColSize, int target) {
     int curr = 0, low = 0, high = matrixSize * (*matrixColSize);
     while (low <= high) {
         curr = low + (high - low) / 2;

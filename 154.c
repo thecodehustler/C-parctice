@@ -10,9 +10,8 @@ int findMin(int* nums, int numsSize) {
             left++;
         }
         int mid = left + (right - left) / 2;
-        if (left == mid || nums[left] < nums[mid]) {  // 左侧是单调递增的？
-            if (right == mid ||
-                nums[mid] < nums[right])  // 右侧也是单调递增的……
+        if (left == mid || nums[left] < nums[mid]) {      // 左侧是单调递增的？
+            if (right == mid || nums[mid] < nums[right])  // 右侧也是单调递增的……
                 return nums[left];
             else
                 left = mid;

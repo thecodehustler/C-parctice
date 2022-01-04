@@ -25,9 +25,8 @@ class Solution {
 };
 
 int main() {
-    vector<pair<vector<int>, bool>> vec = {
-        make_pair<vector<int>, bool>({1, 0, 1, -4, -3}, false),
-        make_pair<vector<int>, bool>({3, 5, 0, 3, 4}, true)};
+    vector<pair<vector<int>, bool>> vec = {make_pair<vector<int>, bool>({1, 0, 1, -4, -3}, false),
+                                           make_pair<vector<int>, bool>({3, 5, 0, 3, 4}, true)};
     for (pair<vector<int>, bool>& x : vec) {
         cout << Solution::find132pattern(x.first) << ' ' << x.second << endl;
     }

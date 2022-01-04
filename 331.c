@@ -36,9 +36,8 @@ bool isValidSerialization(char* preorder) {
                 stack[top - 1]++;  // 已遍历的分支计数 + 1；
             }
         }
-        while (top > 0 &&
-               stack[top - 1] == 2) {  // 检查栈顶，如果已遍历计数为
-                                       // 2，说明对应的节点已经完成了前序遍历。
+        while (top > 0 && stack[top - 1] == 2) {  // 检查栈顶，如果已遍历计数为
+                                                  // 2，说明对应的节点已经完成了前序遍历。
             if ((--top) > 0) {        // 将这个节点的孩子计数退栈
                 stack[top - 1] += 1;  // 栈中上一个节点的已遍历计数 +1；
             }
@@ -49,9 +48,7 @@ bool isValidSerialization(char* preorder) {
     }
     free(stack);
 
-    return (i == len) &&
-           top ==
-               0;  // 没有遍历完，或者遍历完之后栈里还有东西的时候就返回 false。
+    return (i == len) && top == 0;  // 没有遍历完，或者遍历完之后栈里还有东西的时候就返回 false。
 }
 
 int main() {

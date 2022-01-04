@@ -46,8 +46,7 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {
     struct ListNode *slow = &pseudoHead, *fast = &pseudoHead;
     while (slow->next) {
         char flag = 0;  // 是否需要删除文件
-        for (fast = slow->next;
-             fast->next && (fast->next->val == slow->next->val);
+        for (fast = slow->next; fast->next && (fast->next->val == slow->next->val);
              fast = fast->next) {
             flag = 1;
         }

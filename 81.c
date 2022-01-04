@@ -36,8 +36,7 @@ bool search(int* nums, int numsSize, int target) {
 }
 
 int main() {
-    int* arrays[] = {
-        {4, 5, 6, 6, 7, 0, 1, 2, 4, 4}, {2, 1}, {2, 5, 6, 0, 0, 1, 2}};
+    int* arrays[] = {{4, 5, 6, 6, 7, 0, 1, 2, 4, 4}, {2, 1}, {2, 5, 6, 0, 0, 1, 2}};
     int sizes[] = {10, 2, 7};
     int targets[] = {1, 1, 6};
     for (int i = 0; i < 3; i++) {

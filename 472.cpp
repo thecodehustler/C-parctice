@@ -43,9 +43,7 @@ class Solution {
         return true;
     }
 
-    static bool compare(string& s1, string& s2) {
-        return s1.length() < s2.length();
-    }
+    static bool compare(string& s1, string& s2) { return s1.length() < s2.length(); }
 
     bool search(Trie* root, const char* str) {
         const int len = strlen(str);
@@ -84,9 +82,8 @@ class Solution {
 
 int main() {
     Solution sln;
-    vector<string> strs = {"cat", "cats",        "catsdogcats",
-                           "dog", "dogcatsdog",  "hippopotamuses",
-                           "rat", "ratcatdogcat"};
+    vector<string> strs = {"cat",        "cats",           "catsdogcats", "dog",
+                           "dogcatsdog", "hippopotamuses", "rat",         "ratcatdogcat"};
     vector<string> ans = sln.findAllConcatenatedWordsInADict(strs);
     return 0;
 }

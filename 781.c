@@ -6,8 +6,7 @@ int numRabbits(int* answers, int answersSize) {
     for (int i = 0; i < answersSize; i++) {
         ret += (answers[i] + 1);
         int k = answers[i];
-        while (k-- > 0 && i < (answersSize - 1) && answers[i] == answers[i + 1])
-            i++;
+        while (k-- > 0 && i < (answersSize - 1) && answers[i] == answers[i + 1]) i++;
     }
     return ret;
 }
